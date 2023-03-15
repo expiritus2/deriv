@@ -1,0 +1,35 @@
+@import "src/styles/variables";
+@import "src/styles/functions";
+
+.sort {
+  font-size: setUnit(14);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .arrows {
+    position: relative;
+    &:before,
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: setUnit(4) solid transparent;
+      border-right: setUnit(4) solid transparent;
+      border-bottom: setUnit(6) solid darken($greyColor, 10);
+      position: absolute;
+      margin-left: setUnit(15);
+    }
+
+    &:before {
+      top: setUnit(-8);
+    }
+
+    &:after {
+      transform: rotate(180deg);
+      top: setUnit(2);
+    }
+  }
+}

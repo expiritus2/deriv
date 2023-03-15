@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+@import "../../styles/functions";
+
+.tabsWrapper {
+  box-shadow: setUnit(1) setUnit(1) setUnit(1) setUnit(2) rgba($darkColor, 0.2);
+  border-radius: setUnit(3);
+  padding: setUnit(20) 0;
+
+  .tabs {
+    display: flex;
+  }
+
+  .subMarketTabs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: setUnit(20);
+    padding: 0 setUnit(20);
+  }
+
+  .content {
+
+  }
+}

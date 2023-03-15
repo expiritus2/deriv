@@ -1,0 +1,11 @@
+@import "src/styles/variables";
+@import "src/styles/functions";
+
+.chart {
+  height: setUnit(50);
+  width: 100%;
+  max-width: setUnit(100);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}

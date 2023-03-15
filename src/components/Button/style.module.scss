@@ -1,0 +1,21 @@
+@import "src/styles/variables";
+@import "src/styles/functions";
+
+.buttonWrapper {
+  .button {
+    width: fit-content;
+    padding: 0 setUnit(15);
+    height: setUnit(40);
+    cursor: pointer;
+    background: none;
+    border: 2px solid darken($greyColor, 15);
+    border-radius: setUnit(5);
+    transition: all .3s;
+
+    &:hover {
+      background: darken($greyColor, 25);
+      border-color: darken($greyColor, 25);
+      color: $lightColor;
+    }
+  }
+}

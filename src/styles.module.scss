@@ -1,0 +1,7 @@
+@import "src/styles/functions";
+
+.content {
+  width: 100%;
+  max-width: setUnit(1000);
+  margin: setUnit(50) auto;
+}

@@ -1,0 +1,15 @@
+@import "src/styles/variables";
+@import "src/styles/functions";
+
+.symbol {
+  padding: setUnit(20) setUnit(20);
+  border-top: 1px solid $greyColor;
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 0.5fr;
+
+  .element {
+    display: flex;
+    align-items: center;
+  }
+}

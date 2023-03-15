@@ -1,0 +1,15 @@
+@import "../../../styles/variables";
+@import "../../../styles/functions";
+
+.categoryTab {
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    height: 100%;
+    padding: setUnit(10) 0;
+    border-bottom: 2px solid $greyColor;
+
+    &.active {
+      border-bottom-color: $orangeColor;
+    }
+}

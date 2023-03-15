@@ -1,0 +1,17 @@
+@import "../../../styles/variables";
+@import "../../../styles/functions";
+
+.subMarketTab {
+  padding: setUnit(10);
+  background-color: $greyColor;
+  border-radius: setUnit(20);
+  opacity: 0.5;
+  cursor: pointer;
+  margin-bottom: setUnit(10);
+  margin-right: setUnit(10);
+
+  &.active {
+    border-bottom-color: $orangeColor;
+    opacity: 1;
+  }
+}

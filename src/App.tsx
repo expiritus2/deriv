@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { useStore } from './store';
+import { observer } from 'mobx-react-lite';
+import { Tabs } from 'components';
+import styles from './styles.module.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const { activeSymbols, history, tick } = useStore();
+
+  useEffect(() => {
+    activeSymbols.getActiveSymbols();
+    history.getTicksHistory();
+    tick.subscribeTicks();
+
+    return () => {
+      tick.unsubscribeTicks();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (activeSymbols.loading && !activeSymbols.list.length) {
+    return <div>Loading...</div>
+  }
+
+  return <Tabs className={styles.content} />;
 }
 
-export default App;
+export default observer(App);
