@@ -26,8 +26,10 @@ export class ActiveSymbolsStore {
 
     setNames(symbols: ActiveSymbol[]) {
         const grouped = groupBy(symbols, 'market_display_name');
-        this.names = Object.keys(grouped);
-        store.appState.activeTab = this.names[0];
+        this.names = Object.keys(grouped).sort((a, b) => a.localeCompare(b));
+        if(!store.appState.activeTab) {
+            store.appState.activeTab = this.names[0];
+        }
     }
 
     setLoading(loading: boolean) {

@@ -37,7 +37,6 @@ const Content: FC<ComponentProps> = (props) => {
                 <Sort label="24h change" onClick={onClickChangesSort} />
                 <div></div>
                 <div></div>
-                <div></div>
             </div>
             {activeSymbols.getTabSymbols(appState.activeTab, appState.subMarketActiveTab).map((activeSymbol: ActiveSymbol) => {
                 return <Symbol data={activeSymbol} key={activeSymbol.symbol} />

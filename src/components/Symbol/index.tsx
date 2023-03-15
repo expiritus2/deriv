@@ -19,7 +19,6 @@ const Symbol: FC<ComponentProps> = (props) => {
             <div className={styles.element}>{data.display_name}</div>
             <div className={styles.element}>{data.spot}</div>
             <div className={styles.element}>Test 3</div>
-            <div className={styles.element}>Test 4</div>
             <Chart className={styles.element} data={{ labels: [], datasets: [] }} />
             <Button className={styles.element}>Trade</Button>
         </div>
